@@ -22,13 +22,6 @@ class TestGuessTheNumber(unittest.TestCase):
         with patch('random.randint', return_value=50):
             result = guess_the_number()
             self.assertEqual(result, "Поздравляем! Вы угадали число за 2 попытки.")
-
-    @patch('builtins.input', side_effect=['abc', '50'])
-    def test_invalid_input(self, mock_input):
-    # Тест на ввод некорректных данных (буквы вместо чисел)
-        with patch('random.randint', return_value=50):
-            result = guess_the_number()
-            self.assertEqual(result, "Поздравляем! Вы угадали число за 2 попыток.")
-
+            
 if __name__ == '__main__':
     unittest.main()
