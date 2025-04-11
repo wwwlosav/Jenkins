@@ -71,4 +71,8 @@ class TestGuessTheNumber(unittest.TestCase):
 
    
 if __name__ == '__main__':
-    unittest.main()
+    test_loader = unittest.TestLoader()
+    test_suite = test_loader.loadTestsFromTestCase(TestGuessTheNumber)
+
+    test_runner = unittest.TextTestRunner(verbosity=2)
+    test_runner.run(test_suite)
