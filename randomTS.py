@@ -71,8 +71,4 @@ class TestGuessTheNumber(unittest.TestCase):
 
    
 if __name__ == '__main__':
-    test_loader = unittest.TestLoader()
-    test_suite = test_loader.loadTestsFromTestCase(TestGuessTheNumber)
-
-    test_runner = xmlrunner.XMLTestRunner(output='test-reports')
-    test_runner.run(test_suite)
+    unittest.main()
