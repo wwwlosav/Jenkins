@@ -3,7 +3,7 @@ from unittest.mock import patch
 from randomTS import guess_the_number
 
 class TestGuessTheNumber(unittest.TestCase):
-    @patch('bulitins.input',side_effect=['50'])
+    @patch('bulitins.input',side_effect=['50','50'])
     def test_guess_correct(self, mock_input):
         with patch('random.randit',return_valuer=50):
             guess_the_number()
